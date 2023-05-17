@@ -155,6 +155,10 @@ class BetterPlayerControlsConfiguration {
   ///Color of the background, when no frame is displayed.
   final Color backgroundColor;
 
+  ///Decoration of the background, when no frame is displayed.
+  ///Useful to put things like images as background.
+  final Decoration? backgroundDecoration;
+
   ///Color of the bottom modal sheet used for overflow menu items.
   final Color overflowModalColor;
 
@@ -211,6 +215,7 @@ class BetterPlayerControlsConfiguration {
     this.loadingColor = Colors.white,
     this.loadingWidget,
     this.backgroundColor = Colors.black,
+    this.backgroundDecoration,
     this.overflowModalColor = Colors.white,
     this.overflowModalTextColor = Colors.black,
   });

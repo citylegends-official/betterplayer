@@ -93,8 +93,11 @@ class _BetterPlayerWithControlsState extends State<BetterPlayerWithControls> {
     aspectRatio ??= 16 / 9;
     final innerContainer = Container(
       width: double.infinity,
-      color: betterPlayerController
-          .betterPlayerConfiguration.controlsConfiguration.backgroundColor,
+      color: controlsConfiguration.backgroundDecoration == null
+          ? controlsConfiguration.backgroundColor
+          : null,
+      decoration: betterPlayerController
+          .betterPlayerConfiguration.controlsConfiguration.backgroundDecoration,
       child: AspectRatio(
         aspectRatio: aspectRatio,
         child: _buildPlayerWithControls(betterPlayerController, context),
